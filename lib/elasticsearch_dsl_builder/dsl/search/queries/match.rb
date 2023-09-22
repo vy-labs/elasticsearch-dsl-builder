@@ -42,7 +42,7 @@ module ElasticsearchDslBuilder
           end
 
           def to_hash
-            nested_query = { value: @value }
+            nested_query = { query: @value }
             nested_query.update(operator: @operator) if @operator
             nested_query.update(boost: @boost) if @boost
             nested_query.update(fuzziness: @fuzziness) if @fuzziness
