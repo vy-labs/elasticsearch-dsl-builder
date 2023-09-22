@@ -23,7 +23,7 @@ module ElasticsearchDslBuilder
           end
           
           def boost(boost)
-            raise ArgumentError, 'boost must be a Integer' unless boost.instance_of?(Intger)
+            raise ArgumentError, 'boost must be a Integer' unless boost.instance_of?(Integer)
             @boost = boost
             self
           end
